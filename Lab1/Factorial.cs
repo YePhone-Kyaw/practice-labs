@@ -7,14 +7,16 @@ namespace Lab1
 {
     internal class Factorial
     {
-        public BigInteger Calculate(BigInteger number)
+        public delegate void SendResult(BigInteger number);
+        public SendResult WhereToSend;
+        public void Calculate(BigInteger number)
         {
             BigInteger result = 1;
             for (BigInteger i = 1; i <= number; i++)
             {
                 result = result * i;
             }
-            return result;
+            WhereToSend(result);
         }
     }
 }
