@@ -8,7 +8,7 @@ namespace Lab1
     internal class Factorial
     {
         public delegate void SendResult(BigInteger number);
-        public SendResult WhereToSend;
+        public event SendResult WhereToSend;
         public void Calculate(BigInteger number)
         {
             BigInteger result = 1;
