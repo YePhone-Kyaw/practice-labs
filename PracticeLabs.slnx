@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="FileSearch/FileSearch.csproj" Id="65217a1d-9764-49af-b21a-04302795f8ea" />
+  <Project Path="FileSearchWindowsForm/FileSearchWindowsForm.csproj" Id="72b71722-8b5d-42f5-b6e5-af6334aa012a" />
   <Project Path="Lab1/Lab1.csproj" />
   <Project Path="Lab2/Lab2.csproj" Id="d3c82a7e-374f-4188-86bb-dd1485e276fc" />
 </Solution>
