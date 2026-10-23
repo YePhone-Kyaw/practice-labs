@@ -1,4 +1,5 @@
 using CustomerBusinessLogics;
+using DataAccessLayer;
 
 namespace Lab3
 {
@@ -38,7 +39,11 @@ namespace Lab3
                 customer.PhoneNumber = txtPhoneNumber.Text;
                 customer.ProductName = txtProductName.Text;
                 customer.BillAmount = billAmount;
-                customer.Validate();
+                if (customer.Validate())
+                {
+                    CustomerDAL dal = new CustomerDAL();
+                    dal.Add(customer);
+                }
             }
             catch (Exception ex)
             {

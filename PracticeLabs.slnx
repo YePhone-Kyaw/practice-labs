@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="CustomerBusinessLogics/CustomerBusinessLogics.csproj" Id="3e60a75c-aec2-480f-8127-ac2b02feef62" />
+  <Project Path="DataAccessLayer/DataAccessLayer.csproj" Id="7e7e62c8-01b9-42eb-9c48-2371cc43fec5" />
   <Project Path="FileSearch/FileSearch.csproj" Id="65217a1d-9764-49af-b21a-04302795f8ea" />
   <Project Path="FileSearchWindowsForm/FileSearchWindowsForm.csproj" Id="72b71722-8b5d-42f5-b6e5-af6334aa012a" />
   <Project Path="Lab1/Lab1.csproj" />
