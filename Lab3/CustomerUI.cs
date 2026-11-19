@@ -1,5 +1,6 @@
 using CustomerBusinessLogics;
 using DataAccessLayer;
+using System.Data;
 
 namespace Lab3
 {
@@ -8,6 +9,13 @@ namespace Lab3
         public CustomerUI()
         {
             InitializeComponent();
+        }
+
+        private void LoadGrid()
+        {
+            CustomerDAL dal = new CustomerDAL();
+            DataSet customers = dal.Read();
+            customersDataGrid.DataSource = customers.Tables[0];
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,6 +57,10 @@ namespace Lab3
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void CustomerUI_Load(object sender, EventArgs e)
+        {
+            LoadGrid();
         }
     }
 }
