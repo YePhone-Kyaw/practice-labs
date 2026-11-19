@@ -37,8 +37,8 @@
             lblBillAmount = new Label();
             txtBillAmount = new TextBox();
             btnSave = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            customersDataGrid = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)customersDataGrid).BeginInit();
             SuspendLayout();
             // 
             // txtCustomerName
@@ -118,21 +118,21 @@
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
-            // dataGridView1
+            // customersDataGrid
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(59, 291);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1088, 453);
-            dataGridView1.TabIndex = 9;
+            customersDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            customersDataGrid.Location = new Point(59, 291);
+            customersDataGrid.Name = "customersDataGrid";
+            customersDataGrid.RowHeadersWidth = 62;
+            customersDataGrid.Size = new Size(1088, 453);
+            customersDataGrid.TabIndex = 9;
             // 
             // CustomerUI
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1227, 816);
-            Controls.Add(dataGridView1);
+            Controls.Add(customersDataGrid);
             Controls.Add(btnSave);
             Controls.Add(lblBillAmount);
             Controls.Add(txtBillAmount);
@@ -144,7 +144,8 @@
             Controls.Add(txtCustomerName);
             Name = "CustomerUI";
             Text = "Customer Management Application";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += CustomerUI_Load;
+            ((System.ComponentModel.ISupportInitialize)customersDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,6 +161,6 @@
         private Label lblBillAmount;
         private TextBox txtBillAmount;
         private Button btnSave;
-        private DataGridView dataGridView1;
+        private DataGridView customersDataGrid;
     }
 }

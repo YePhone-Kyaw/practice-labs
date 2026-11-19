@@ -1,5 +1,6 @@
 ﻿using CustomerBusinessLogics;
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace DataAccessLayer
 {
@@ -34,6 +35,27 @@ namespace DataAccessLayer
             catch (Exception ex)
             {
                 return false;
+            }
+        }
+
+        public DataSet Read()
+        {
+            string connectionStr = @"Data Source=localhost;Initial Catalog=CustomerDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+            {
+                SqlConnection connection = new SqlConnection(connectionStr);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(
+                    "SELECT * FROM Customer");
+
+                // Dataset and Data Adapter
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataSet customers = new DataSet();
+                adapter.Fill(customers);
+
+                connection.Close();
+                return customers;
             }
         }
     }
