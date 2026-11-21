@@ -47,7 +47,7 @@ namespace DataAccessLayer
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(
-                    "SELECT * FROM Customer");
+                    "SELECT * FROM Customer", connection);
 
                 // Dataset and Data Adapter
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
